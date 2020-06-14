@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:WpfApp1CoursePaint"
         mc:Ignorable="d"
         Title="Курсовая работа - программа-аналог Паинта" Height="500" Width="700" WindowStartupLocation="CenterScreen">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+
+
+
+
+        <Canvas Background="WhiteSmoke" Name="MainCanvas" />
+    </DockPanel>
 </Window>
