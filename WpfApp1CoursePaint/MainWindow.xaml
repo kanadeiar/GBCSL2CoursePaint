@@ -7,10 +7,42 @@
         mc:Ignorable="d"
         Title="Курсовая работа - программа-аналог Паинта" Height="500" Width="700" WindowStartupLocation="CenterScreen">
     <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <ToolBar Height="60">
+                <Label Content="Фигура:" VerticalAlignment="Center"/>
+                <RadioButton x:Name="buttonPen" GroupName="selectPen" Width="35" Height="35" Click="ButtonPen_OnClick">
+                    <Ellipse Fill="Green" Width="5" Height="5"/>
+                </RadioButton>
+                <RadioButton x:Name="buttonCircle" GroupName="selectPen" Click="ButtonCircle_OnClick">
+                    <Ellipse Fill="Green" Width="30" Height="30"/>
+                </RadioButton>
+                <RadioButton x:Name="buttonRect" GroupName="selectPen" Click="ButtonRect_OnClick">
+                    <Rectangle Fill="Green" Width="30" Height="30"/>
+                </RadioButton>
+            </ToolBar>
+            <ToolBar>
+                <Label Content="Цвет:" VerticalAlignment="Center"/>
+                <RadioButton x:Name="buttonWhite" GroupName="selectColor" Click="ButtonWhite_OnClick">
+                    <Rectangle Fill="White" Width="30" Height="30"/>
+                </RadioButton>
+                <RadioButton x:Name="buttonBlack" GroupName="selectColor" Click="ButtonBlack_OnClick">
+                    <Rectangle Fill="Black" Width="30" Height="30"/>
+                </RadioButton>
+                <RadioButton x:Name="buttonGreen" GroupName="selectColor" Click="ButtonGreen_OnClick">
+                    <Rectangle Fill="Green" Width="30" Height="30"/>
+                </RadioButton>
+                <RadioButton x:Name="buttonYellow" GroupName="selectColor" Click="ButtonYellow_OnClick">
+                    <Rectangle Fill="Yellow" Width="30" Height="30"/>
+                </RadioButton>
+                <RadioButton x:Name="buttonRed" GroupName="selectColor" Click="ButtonRed_OnClick">
+                    <Rectangle Fill="Red" Width="30" Height="30"/>
+                </RadioButton>
+            </ToolBar>
+        </StackPanel>
 
 
+        <Canvas x:Name="canvasPaint" Background="LightCyan" MouseDown="CanvasPaint_OnMouseDown"/>
 
 
-        <Canvas Background="WhiteSmoke" Name="MainCanvas" />
     </DockPanel>
 </Window>
